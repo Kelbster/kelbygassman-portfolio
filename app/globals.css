@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Avenir Next";
+  src:
+    local("Avenir Next"),
+    url("/fonts/AvenirNext.woff2") format("woff2");
+    font-weight: 400;    
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: "Avenir Next Bold";
+  src:
+    local("Avenir Next Bold"),
+    url("/fonts/AvenirNext-Bold.woff2") format("woff2");
+    font-weight: 700;    
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src:
+    local("Helvetica Neue"),
+    url("/fonts/HelveticaNeue-Roman.woff2") format("woff2");
+    font-weight: 400;    
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,4 +54,12 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    font-family: "Avenir Next", sans-serif;
+}
+
+.heading-hero {
+  font-family: "Avenir Next Bold";
+  font-size: 5.875rem;
+  line-height: 6.625rem;
+  margin: 0 0 2rem;
 }
