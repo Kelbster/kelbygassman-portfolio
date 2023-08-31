@@ -7,9 +7,9 @@
   src:
     local("Avenir Next"),
     url("/fonts/AvenirNext.woff2") format("woff2");
-    font-weight: 400;    
-    font-style: normal;
-    font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -17,9 +17,9 @@
   src:
     local("Avenir Next Bold"),
     url("/fonts/AvenirNext-Bold.woff2") format("woff2");
-    font-weight: 700;    
-    font-style: normal;
-    font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -27,39 +27,36 @@
   src:
     local("Helvetica Neue"),
     url("/fonts/HelveticaNeue-Roman.woff2") format("woff2");
-    font-weight: 400;    
-    font-style: normal;
-    font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --color-foreground: #0f1010;
+  --color-background: #f8f5f0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --color-foreground: #f8f5f0;
+    --color-background: #0f1010;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-    font-family: "Avenir Next", sans-serif;
+  color: var(--color-foreground);
+  background: var(--color-background);
+}
+
+.helvetica {
+  font-family: "Helvetica Neue";
 }
 
 .heading-hero {
   font-family: "Avenir Next Bold";
   font-size: 5.875rem;
   line-height: 6.625rem;
+  font-weight: 700;
   margin: 0 0 2rem;
 }

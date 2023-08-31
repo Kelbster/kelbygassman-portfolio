@@ -1,19 +1,26 @@
-import './globals.css'
-import type { Metadata } from 'next'
+import "./globals.css";
+import type { Metadata } from "next";
+
+import Nav from "./components/nav";
+import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: 'Kelby Gassman UX Designer',
-  description: 'Kelby Gassman\'s UX Designer and Design Technologist portfolio',
-}
+  title: "Kelby Gassman UX Designer",
+  description: "Kelby Gassman's UX Designer and Design Technologist portfolio",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
-  )
+  );
 }
