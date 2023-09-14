@@ -7,16 +7,19 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      gray: {
+        100: '#0f1010',
+        900: '#f8f5f0',
+      },
+    },
     fontFamily: {
-      sans: ["Avenir Next", "sans-serif"],
+      sans: ["Metropolis", "sans-serif"],
+      sansBold: ["Metropolis Bold", "sans-serif"],
+      helvetica: ["Helvetica Neue", "sans-serif"],
       serif: ["Merriweather", "serif"],
     },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
     },
   },
   plugins: [],
