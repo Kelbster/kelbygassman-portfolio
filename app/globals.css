@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Avenir Next";
+  font-family: "Metropolis";
   src:
-    local("Avenir Next"),
-    url("/fonts/AvenirNext.woff2") format("woff2");
+    local("Metropolis Regular"),
+    url("/fonts/Metropolis-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Avenir Next Bold";
+  font-family: "Metropolis Bold";
   src:
-    local("Avenir Next Bold"),
-    url("/fonts/AvenirNext-Bold.woff2") format("woff2");
+    local("Metropolis Bold"),
+    url("/fonts/Metropolis-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -33,14 +33,14 @@
 }
 
 :root {
-  --color-foreground: #0f1010;
-  --color-background: #f8f5f0;
+  --color-foreground: theme(colors.gray.100);
+  --color-background: theme(colors.gray.900);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-foreground: #f8f5f0;
-    --color-background: #0f1010;
+    --color-background: theme(colors.gray.100);
+    --color-foreground: theme(colors.gray.900);
   }
 }
 
@@ -49,14 +49,26 @@ body {
   background: var(--color-background);
 }
 
-.helvetica {
-  font-family: "Helvetica Neue";
+.heading {
+  @apply font-sansBold;
+  font-size: 5.875rem;
+  font-weight: 700;
+  line-height: 6.625rem;
+  letter-spacing: .1875rem;
 }
 
-.heading-hero {
-  font-family: "Avenir Next Bold";
-  font-size: 5.875rem;
-  line-height: 6.625rem;
-  font-weight: 700;
+.heading.hero {
   margin: 0 0 2rem;
+  text-transform: uppercase;
 }
+
+.sub-heading {
+  @apply text-xl;
+  letter-spacing: .05rem;
+}
+
+.super-heading {
+  @apply text-xl;
+  letter-spacing: .05rem;
+}
+
