@@ -48,27 +48,3 @@ body {
   color: var(--color-foreground);
   background: var(--color-background);
 }
-
-.heading {
-  @apply font-sansBold;
-  font-size: 5.875rem;
-  font-weight: 700;
-  line-height: 6.625rem;
-  letter-spacing: .1875rem;
-}
-
-.heading.hero {
-  margin: 0 0 2rem;
-  text-transform: uppercase;
-}
-
-.sub-heading {
-  @apply text-xl;
-  letter-spacing: .05rem;
-}
-
-.super-heading {
-  @apply text-xl;
-  letter-spacing: .05rem;
-}
-
