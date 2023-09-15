@@ -9,8 +9,13 @@ const config: Config = {
   theme: {
     colors: {
       gray: {
-        100: '#0f1010',
-        900: '#f8f5f0',
+        100: "#0f1010",
+        900: "#f8f5f0",
+      },
+      system: {
+        error: "#ff432b",
+        warning: "#f5e94a",
+        success: "#49e09a",
       },
     },
     fontFamily: {
@@ -19,8 +24,7 @@ const config: Config = {
       helvetica: ["Helvetica Neue", "sans-serif"],
       serif: ["Merriweather", "serif"],
     },
-    extend: {
-    },
+    extend: {},
   },
   plugins: [],
 };
