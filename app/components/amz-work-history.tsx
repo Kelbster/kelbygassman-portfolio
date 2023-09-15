@@ -4,21 +4,24 @@ import { useRef } from "react";
 import Image from "next/image";
 import { easeInOut, motion, useScroll, useTransform } from "framer-motion";
 import {
+  aboutContainerGrid,
   containerDefault,
   heading,
   headingLink,
   infoHeading,
   infoHeadingLink,
   linkInline,
+  parallaxContainer,
   subHeading,
   superHeading,
+  workIntroContainer,
 } from "../styles/index";
 
 export default function AmzWorkHistory() {
-  const refParallax = useRef(null);
+  const refAmzParallax = useRef(null);
 
   const { scrollYProgress } = useScroll({
-    target: refParallax,
+    target: refAmzParallax,
     offset: ["start end", "start start"],
   });
 
@@ -44,7 +47,7 @@ export default function AmzWorkHistory() {
   return (
     <section>
       <div
-        className="h-[400px] md:h-[545px]"
+        className={workIntroContainer}
         style={{
           background: "linear-gradient(135deg, #FFC400 0%, #F90 100%)",
         }}
@@ -71,16 +74,13 @@ export default function AmzWorkHistory() {
 
       <div className="bg-gray-900 text-gray-100">
         <div className={`${containerDefault} mx-auto pt-24 sm:pt-32 pb-32`}>
-          <div
-            ref={refParallax}
-            className="relative h-[320px] md:h-[500px] lg:h-[600px] w-[100%] lg:w-[820px] mx-auto"
-          >
+          <div ref={refAmzParallax} className={parallaxContainer("h-[290px]")}>
             <motion.div
               className="absolute z-10"
               style={{ y: imgY1, x: "50%", right: "50%" }}
             >
               <Image
-                className="drop-shadow-lg rounded-lg max-w-[200px] md:max-w-[311px] lg:max-w-[411px]"
+                className="drop-shadow-lg rounded-lg max-w-[200px] sm:max-w-[250px] md:max-w-[311px] lg:max-w-[411px]"
                 src="/images/amz-1.jpg"
                 alt="Blurred work from Amazon Games"
                 height={300}
@@ -92,7 +92,7 @@ export default function AmzWorkHistory() {
               style={{ y: imgY2, x: imgX2, right: "50%" }}
             >
               <Image
-                className="drop-shadow-lg rounded-lg max-w-[140px] md:max-w-[256px] lg:max-w-[306px]"
+                className="drop-shadow-md rounded-lg max-w-[140px] sm:max-w-[200px] md:max-w-[256px] lg:max-w-[306px]"
                 src="/images/amz-2.jpg"
                 alt="Blurred work from Amazon Games"
                 height={275}
@@ -104,7 +104,7 @@ export default function AmzWorkHistory() {
               style={{ y: imgY3, x: imgX3, right: "50%" }}
             >
               <Image
-                className="drop-shadow-lg rounded-lg max-w-[140px] md:max-w-[256px] lg:max-w-[306px]"
+                className="drop-shadow-md rounded-lg max-w-[140px] sm:max-w-[200px] md:max-w-[256px] lg:max-w-[306px]"
                 src="/images/amz-3.jpg"
                 alt="Blurred work from Amazon Games"
                 height={275}
@@ -115,7 +115,7 @@ export default function AmzWorkHistory() {
           <div
             className={`${containerDefault} md:grid grid-flow-col auto-cols lg:gap-2 md:gap-8 mb-16 md:mb-32`}
           >
-            <div className="grid grid-flow-row sm:grid-flow-col w-auto mb-8 md:block md:mb-0 md:w-60 lg:w-80">
+            <div className={aboutContainerGrid}>
               <div className="mb-6">
                 <h3 className={`text-gray-100 flex`}>
                   <a
@@ -174,12 +174,29 @@ export default function AmzWorkHistory() {
             <div>
               <h3 className="text-2xl sm:text-3xl text-gray-100 mb-3">About</h3>
               <p className="font-helvetica text-base md:text-lg">
-                The Gotham Design System is a multi-tenant system that focuses
-                on creating fun, engaging experiences for Amazon partners and
-                customers. This is not a &ldquo;one size fits all&rdquo;
-                approach, but instead targets games, multimedia, and digital
-                e-commerce. My work at Amazon is confidential, but if
-                you&rsquo;re interested in finding out more about my experience,{" "}
+                The{" "}
+                <span className="relative">
+                  <motion.span
+                    initial={{ scaleX: 0, opacity: 0, transformOrigin: "left" }}
+                    whileInView={{
+                      scaleX: 1,
+                      opacity: 0.7,
+                      rotate: "-.75deg",
+                      skew: "-3deg",
+                    }}
+                    transition={{ delay: 0.5, duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="block absolute -inset-1 -skew-y-1 top-[90%] bg-system-warning"
+                    aria-hidden="true"
+                  ></motion.span>
+                  <span className="relative">Gotham Design System</span>
+                </span>{" "}
+                is a multi-tenant system that focuses on creating fun, engaging
+                experiences for Amazon partners and customers. This is not a
+                &ldquo;one size fits all&rdquo; approach, but instead targets
+                games, multimedia, and digital e-commerce. My work at Amazon is
+                confidential, but if you&rsquo;re interested in finding out more
+                about my experience,{" "}
                 <a className={linkInline} href="mailto:kelby.gassman@gmail.com">
                   please reach out
                 </a>

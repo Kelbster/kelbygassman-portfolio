@@ -3,7 +3,6 @@ import MonsterWorkHistory from "./components/monster-work-history";
 import CventWorkHistory from "./components/cvent-work-history";
 // import Praise from "./components/praise";
 import { headingHero, superHeading } from "./styles/index";
-import "./styles/index.css";
 
 export default function Page() {
   return (
@@ -15,8 +14,8 @@ export default function Page() {
         </div>
       </div>
       <AmzWorkHistory />
-      {/* <MonsterWorkHistory />
-      <CventWorkHistory /> */}
+      <MonsterWorkHistory />
+      <CventWorkHistory />
     </>
   );
 }
