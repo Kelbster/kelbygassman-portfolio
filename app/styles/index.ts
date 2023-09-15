@@ -33,7 +33,7 @@ export const headingHero = `${heading} mb-8 uppercase`;
 export const headingLink = linkHover;
 
 export const subHeading =
-  "text-base md:text-xl leading-[1.375rem] tracking-[0.05rem]";
+  "text-base md:text-2xl leading-[1.375rem] tracking-[0.05rem]";
 
 export const infoHeading =
   "text-lg md:text-xl leading-[1.375rem] tracking-[0.05rem]";
