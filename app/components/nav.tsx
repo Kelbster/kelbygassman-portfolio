@@ -32,7 +32,7 @@ const Nav = () => (
       <li>
         <a
           className={linkCss}
-          href="/Kelby%20Gassman%20Resume.pdf"
+          href="/Kelby-Gassman-Resume-min.pdf"
           rel="noopener noreferrer"
           target="_blank"
         >
