@@ -60,7 +60,7 @@ const CventWorkHistory = () => {
             </a>
           </h1>
           <h3 className={`${subHeading} text-gray-900`}>
-            Finding the right fit for job seekers and employers
+            A better way to manage your events
           </h3>
         </div>
       </div>
