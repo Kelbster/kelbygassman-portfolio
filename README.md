@@ -1,4 +1,7 @@
-# This is my (Kelby's) portfolio site.
+# This is my (Kelby's) old portfolio site.
+
+
+Now built with Framer:
 
 https://www.kelbygassman.com/
 
